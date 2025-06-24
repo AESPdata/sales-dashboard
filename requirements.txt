@@ -1,0 +1,7 @@
+streamlit  # Librería principal para construir el dashboard interactivo
+pandas     # Para manipulación y análisis de datos, ideal para DataFrames
+numpy      # Para operaciones numéricas eficientes, especialmente en la generación de datos simulados
+matplotlib # Para la creación de gráficos estáticos y personalizables
+seaborn    # Para gráficos estadísticos más atractivos y complejos, construido sobre Matplotlib
+plotly_express # Para gráficos interactivos y visualizaciones avanzadas
+scikit-learn # Para la generación de datos sintéticos y modelos de machine learning
