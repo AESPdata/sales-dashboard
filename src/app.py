@@ -1,12 +1,19 @@
+import sys
+import os
+current_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.dirname(current_dir)
+if project_root not in sys.path:
+    sys.path.append(project_root)
+
 import streamlit as st # Importa la librería principal de Streamlit
 import pandas as pd # Importa Pandas para manipulación de datos
 import datetime # Importa datetime para manejar fechas
 
 # Importa las funciones personalizadas desde los módulos locales
-from .data_handler import load_data 
+from src.data_handler import load_data 
 # Importa todas las funciones de utilidad y trazado
-from .utils import calculate_qtd_metrics, get_last_n_orders, calculate_country_performance, get_quarterly_data, get_running_totals_by_week, get_seller_performance_data, get_available_quarters, calculate_city_performance, get_seller_performance_over_time_data
-from .plots import plot_running_totals, plot_quarterly_metrics, plot_country_performance, plot_seller_performance, plot_city_performance, plot_seller_performance_over_time
+from src.utils import calculate_qtd_metrics, get_last_n_orders, calculate_country_performance, get_quarterly_data, get_running_totals_by_week, get_seller_performance_data, get_available_quarters, calculate_city_performance, get_seller_performance_over_time_data
+from src.plots import plot_running_totals, plot_quarterly_metrics, plot_country_performance, plot_seller_performance, plot_city_performance, plot_seller_performance_over_time
 
 # --- Configuración de la página de Streamlit ---
 # Configura el layout de la página como 'wide' para aprovechar el ancho completo
